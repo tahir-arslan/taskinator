@@ -57,6 +57,7 @@ form input {
 form .form-group {
   margin: 10px 6px 10px 0;
   flex: 1;
+  flex-direction: column;
 }
 
 footer {
