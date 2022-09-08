@@ -1,4 +1,4 @@
-varbuttonEl = document.querySelector("#save-task");
+var buttonEl = document.querySelector("#save-task");
 // if element will be referenced more than once, best to assign it to a variable
 // if not and query for element is needed, it will search DOM everytime and will
 // cause a noticable drain in resources and webpage performance
