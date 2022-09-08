@@ -1,0 +1,52 @@
+Notes:
+console.dir allows HTML element to be displayed as an object with an interactive list
+    console.dir(object);
+    vs console.log which displays element's HTML
+    console.log(object) | console.log("string", object);
+
+can use console.dir(window.document.querySelector(object)); to pull up interactive list
+    since we are opening index.html in browser, writing window is unneeded since
+    it is a global object
+
+ex used in lesson:
+    console.dir(window.document);
+
+user behavior is called an event (in this case the click)
+observation of that event is called the event listener
+response to that event is called the event handler
+
+console.log(buttonEl);
+    convention: the El indicates this is a DOM element
+
+//////////////////////////////////////////////////////////////
+//////////                  timer function:                  //////////
+//////////////////////////////////////////////////////////////
+var counter = 10
+var countdown = function () {
+    console.log(counter);
+    counter--;
+    if (counter === 0){
+        console.log("blastoff");
+        clearInterval(startCountdown);
+    };
+};
+
+var startCountdown = setInterval(countdown, 1000);
+
+//////////////////////////////////////////////////////////////
+//////////                 setTimeout fxn                   //////////
+//////////////////////////////////////////////////////////////
+var sayHello = function() {
+    console.log("Hello there");
+};
+
+var timedGreeting = setTimeout(sayHello, 2000);
+
+clearTimeout(timedGreeting);
+
+<--
+why would you want to do clearTimeout? in some cases you might not want the callback
+function in setTimeout to occur. this prevents the callback function from occuring.
+
+without this, sayHello will execute after 2 seconds.
+-->
