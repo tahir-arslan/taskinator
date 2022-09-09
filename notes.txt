@@ -61,3 +61,25 @@ when we use javascript to listen for an event that occurs on an HTML element, br
 this object can be used, aka Event Object, by making the function that's executed by 
     the event have an argument to represent the event object
     the browser can then fill in the data for that event and pass argument into the function
+
+`document.querySelector()` returns the first element it finds on the page
+
+create an eventListener and console log it's event.target
+    this allows you to click on an element in the browser and it will console log it's html code
+        var pageContentEl = document.querySelector("#page-content");
+        var taskButtonHandler = function(event) {
+            console.log(event.target);
+        };
+        pageContentEl.addEventListener("click", taskButtonHandler);
+
+querySelector() vs matches()
+    querySelector() returns element
+    matches() returns true/false
+
+in the following code:
+    var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
+it is important to note that since there is no space between `.task-item` and `[data-task-id]`
+this indicates that the properties are both within the same element
+    if there was a space between the two, it would indicate that `[data-task-id]` attribute
+    is somewhere inside a `.task-item` element
+
