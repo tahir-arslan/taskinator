@@ -83,3 +83,20 @@ this indicates that the properties are both within the same element
     if there was a space between the two, it would indicate that `[data-task-id]` attribute
     is somewhere inside a `.task-item` element
 
+localStorage() can only save things as a string, and it is difficult to convert DOM elements
+to a string. solution should package the data in key:value pairs in an array variable
+
+for deleting a task, we need to create a new variable (updatedTaskArr) to store data.
+    we compare the updated tasks's id to the current/previous task's id, and if it is not the
+    same (aka new task created) then we want to keep the task and .push() it into
+    the new updatedTasksArr. 
+
+when to save data? anytime we make data changes. don't forget to retrieve saved data!
+
+how to clear localStorage from browser:
+- open DevTools => Application tab => Clear Storage next to trask can icon
+  => clear site data in dialog that appears
+
+  errors:
+  - line 58: taskDataObj.name showing as undefined
+  - line 62-77, specifically line 72 showing error of undefined
